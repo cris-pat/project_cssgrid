@@ -634,7 +634,7 @@ footer {
 
     .hero::before {    
         content: "";
-        background-image: url(/assets/img/undraw_product_iteration_kjok.svg);
+        background-image: url(../assets/img/undraw_product_iteration_kjok.svg);
         background-size: cover;
         position: absolute;
         margin-top: 0rem;
@@ -740,7 +740,7 @@ footer {
 
     .hero::before {    
         content: "";
-        background-image: url(/assets/img/undraw_product_iteration_kjok.svg);
+        background-image: url(../assets/img/undraw_product_iteration_kjok.svg);
         background-size: cover;
         position: absolute;
         margin-top: 10rem;
