@@ -38,7 +38,7 @@
                                     Cotizaciones
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Automotores</a></li>
+                                    <li><a class="dropdown-item" href="./pages/01_automotores.html">Automotores</a></li>
                                     <li><a class="dropdown-item" href="#">Hogar</a></li>
                                     <li><a class="dropdown-item" href="#">Accidentes Personales</a></li>
                                     <li><a class="dropdown-item" href="#">Integral de Comercio</a></li>
@@ -62,7 +62,7 @@
             <section class="hero">
                 <div class="textos__hero">
                     <h1 class="weight-400">Tu <span class="weight-600_high">tranquilidad</span> también es la nuestra. <br> Entendemos de riesgos.</h1>
-                    <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eveniet magni veniam provident illum dicta autem ullam facere maiores aliquam?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eveniet magni veniam provident illum dicta autem ullam facere maiores aliquam?</p>
                     <a href="" class="cta__hero">Contáctanos</a>
                 </div>
                 <div class="img__hero">
@@ -151,7 +151,9 @@
                 <div class="main__nuestrosproductos__container">
                     <div class="tarjetaproducto">
                         <div class="imagenproducto">
-                            <img src="./assets/img/Tarjetas/Automotores.png" alt="">
+                            <a href="./pages/01_automotores.html">
+                                <img src="./assets/img/Tarjetas/Automotores.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="tarjetaproducto">
@@ -201,7 +203,43 @@
                     </div>
                 </div>
                 <div class="main__contactanos_datoscontacto__form">
-                    <img src="https://dummyimage.com/450x350/cfcfcf/fff" alt="">
+
+                        <form class="row g-3">
+                            <div class="col-md-6 text-light fs-5">
+                                <label for="text" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="inputName">
+                            </div>
+                            <div class="col-md-6 text-light fs-5">
+                                <label for="inputEmail4" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="">
+                            </div>
+                            <div class="col-6 text-light fs-5">
+                                <label for="inputPhone" class="form-label">Teléfono</label>
+                                <input type="number" class="form-control" id="inputPhone" placeholder="+54 11 4444 5555">
+                            </div>
+                            <div class="col-6 text-light fs-5">
+                                <label for="text" class="form-label">Asunto</label>
+                                <input type="text" class="form-control" id="inputAsunto" placeholder="">
+                            </div>
+                            <div class="col-md-12 text-light fs-5">
+                                <label for="text" class="form-label">Mensaje</label>
+                                <!-- <input type="text" class="form-control form-control-lg mb-2" id="inputMensaje"> -->
+                                <textarea class="form-control form-control-lg mb-2" id="inputMensaje" rows="3"
+                                    placeholder="Contanos tu idea"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check text-light">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                        Check me out
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </form>
+
                 </div>
             </section>
         </main>
