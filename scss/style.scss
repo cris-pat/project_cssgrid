@@ -25,7 +25,6 @@
 
 main {
     grid-area: main;
-
 }
 
 /* --------INICIO HERO-------- */
@@ -77,6 +76,13 @@ main {
     box-shadow: 0 0 6px rgba(0, 0, 0, .5);
     overflow: hidden;
     border-radius: 10px;
+    user-select: none;
+    -webkit-transition-property: color, background-color; 
+    transition-property: color, background-color;
+    -webkit-transition-duration: .4s, .4s; 
+    transition-duration: .4s, .4s;
+    -webkit-transition-timing-function: linear, ease-in;
+    transition-timing-function: linear, ease-in;
 }
 
 .tarjeta:hover {
@@ -107,6 +113,12 @@ main {
 .main__sobrenosotros {
     padding: 4.5rem 0;
     margin-bottom: -5rem;
+    &__container {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
 
 .main__sobrenosotros__container {
@@ -139,7 +151,6 @@ main {
     font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    /* margin-top: 0.125rem; */
     position: relative;
     color: #186adc;
     padding-right: 0.3125rem;
@@ -169,21 +180,15 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     height: fit-content;
-    /* OJO REVISAR ESTA PROPIEDAD */
-    /* height: 20rem; */
-    /* margin-bottom: -30px; */
     justify-content: space-evenly;
     align-items: center;
     margin-top: 1rem;
 }
 
 .tarjetaproducto {
-    /* padding: 1.5rem 1.5rem 1rem 1.5rem; */
     background-color: #ffffff;
     width: fit-content;
     height: fit-content;
-    /* ojo con esta propiedad EDITAR a REM */
-    // margin-left: 50px;
     margin: 30px 30px;
     box-shadow: 0 0 6px rgba(0, 0, 0, .5);
     overflow: hidden;
@@ -196,28 +201,10 @@ main {
     box-shadow: 0 0 15px #515151;
 }
 
-@keyframes leaves {
-    0% {
-        transform: scale(1.25);
-        -webkit-transform: scale(1.25);
-    }
-    100% {
-        transform: scale(1.0);
-        -webkit-transform: scale(1.0);
-    }
-}
-
-.header__container__logo {
-    animation: leaves .5s ease-in-out ;
-    -webkit-animation: leaves .5s ease-in-out;
-}
-
 .overlay {
     width: 282px;
     height: 80px;
-    // background: rgba(122, 122, 122, .400);
     background: rgba(6, 92, 198, 0.65);
-    // background: #51515171;
     position: absolute;
     z-index: 0;
     margin-left: -1px;
@@ -225,7 +212,6 @@ main {
     border-end-end-radius: 10px;
     border-bottom-left-radius: 10px;
     opacity: 0;
-    // mix-blend-mode:normal;
     transition: all 300ms ease-in-out;
     -webkit-transition: all 300ms ease-in-out;
     -moz-transition: all 300ms ease-in-out;
@@ -294,7 +280,6 @@ main {
 
 .subrayado {
     font-weight: 400;
-    /* font-style: italic; */
 }
 
 .main__contactanos__datoscontacto {
@@ -335,33 +320,6 @@ main {
 
 // _footer.scss
 
-/* -----QUIENES-SOMOS.HTML----- */
-
-.quienes-somos__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr auto 2fr;
-    gap: 10px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "header header header"
-        "main main main"
-        "footer footer footer";
-}
-
-header {
-    grid-area: header;
-}
-
-main {
-    grid-area: main;
-}
-
-footer {
-    grid-area: footer;
-    margin-top: auto;
-}
-
 // ** -----SECCIONES----- **
 .secciones__container {
     display: grid;
@@ -384,12 +342,13 @@ main {
 }
 
 footer {
-    @extend footer;
+    grid-area: footer;
+    margin-top: auto;
 }
 
 .main__secciones {
     padding: 3rem 0;
-    margin-bottom: -3rem;
+    margin-bottom: -1rem;
 }
 
 .main__secciones__container {
@@ -399,15 +358,14 @@ footer {
     padding-top: .5rem;
     padding-right: 1rem;
     padding-left: 1rem;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
 .main__secciones_banner {
     image-rendering: auto;
+    margin: 0 auto;
     image-rendering: crisp-edges;
 }
-
 
 .titulo-secciones {
     font-weight: 500;
@@ -425,16 +383,14 @@ footer {
     padding: 5px 10px;
     text-align: center;
     font-size: 1.4rem;
-    margin-top: 1em;
+    margin-top: .8em;
 }
 
 .parrafo-secciones {
     max-width: 1200px;
     text-align: justify;
-    // text-justify: inter-word;
     font-weight: 300;
     font-size: 1.35rem;
-    hyphens: auto;
 }
 
 .parrafo-secciones-cob {
@@ -466,34 +422,24 @@ footer {
     margin-left: 25px;
 }
 
-/* -----PRODUCTOS.HTML----- */
+.cotizador__secciones {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
-// .productos__container {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr;
-//     grid-template-rows: 1fr auto 2fr;
-//     gap: 10px 0px;
-//     grid-auto-flow: row;
-//     grid-template-areas:
-//         "header header header"
-//         "main main main"
-//         "footer footer footer";
-// }
+.cotizador__secciones__form {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* -----PRODUCTOS.HTML----- */
 
 .body__productos {
     background-color: #f0f4f8;
 }
 
-header {
-    grid-area: header;
-}
-
 .main__productos {
     grid-area: main;
-}
-
-footer {
-    @extend footer;
 }
 
 /* -----CONTACTO.HTML----- */
@@ -514,7 +460,6 @@ footer {
     padding-top: 5px;
     font-family: 'Montserrat', sans-serif;
 }
-// para ver mixin
 
 @mixin main__contacto_prop {
     display: flex;
@@ -529,11 +474,6 @@ footer {
 }
 
 .main__contacto__info {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: left;
-    // justify-content: space-around;
-    // max-height: 270px;
     @include main__contacto_prop;
     padding-left: 5px;
     align-items: left;
@@ -541,62 +481,6 @@ footer {
 
 footer {
     @extend footer;
-}
-
-/* -----01_automotores.HTML----- SECCIONES */
-
-/* -----ejercicio SASS II (MAPS+EXTEND+MIXIN)----- */
-// MAPS
-$redes: (
-    instagram: #833AB4,
-    twitter: #55acee,
-    pinterest: #c8232c,
-);
-
-@each $red, $color in $redes {
-    .btn--#{$red}{
-        background-color: $color;
-        font-size: 24px;
-        padding: 10px;
-        margin-top: 20px;
-        margin-left: 20px;
-        width: 150px;
-    }
-}
-
-// EXTEND
-.redsocial {
-    border: 10px #1f7fec;
-    background-color: #5e5e5e;
-    width: 500px;
-}
-
-.redsocial--nueva {
-    @extend .redsocial;
-    color: #eee;
-}
-
-.redsocial--segunda {
-    @extend .redsocial;
-    color:darkgoldenrod;
-    background-color: beige;
-}
-
-.redsocial--copia {
-    @extend .redsocial;
-    color: gainsboro;
-    background-color: #919191;
-}
-
-// MIXIN
-@mixin size ($width, $height){
-    height: $height;
-    width: $width;
-}
-
-.my-mixin {
-    @include size (500px, 50px);
-    background-color: #55acee;
 }
 
 /* -----ejercicio SASS II (MAPS+EXTEND+MIXIN)----- */
@@ -754,7 +638,6 @@ footer {
     }
 
     .hero {
-        // max-width: 992px;
         padding: 10vh 0 10vh 10vh;
         height: 83vh;
     }
@@ -810,6 +693,10 @@ footer {
         
     }
 
+    .main__secciones_banner {
+        margin: 0;
+    }
+
     .titulo-secciones {
         text-align: center;
         display: inline-block;
@@ -817,14 +704,16 @@ footer {
         border-radius: 20px;
         color: #fff;
         font-weight: 400;
-        font-size: 2rem;
         margin-top: 1em;
-        font-size: 1.45rem;
+        font-size: 1.40rem;
+        padding: 5px 0;
     }
 
     .parrafo-secciones {
         font-size: 1.2rem;
         font-weight: 400;
+        padding-top: .2rem;
+        hyphens: auto;
     }
 
     .titulo-secciones-cob {
@@ -841,8 +730,6 @@ footer {
         margin: 0 auto;
         margin-bottom: 1rem;
     }
-
-
 
     footer {
         margin-top: auto;
@@ -967,7 +854,6 @@ footer {
     }
 
     .main__contactanos {
-        /* display: none; */
         flex-direction: column;
     }
 
@@ -983,7 +869,6 @@ footer {
 
     .main__contactanos__container>p {
         padding: 1rem;
-
     }
 
     .main__contactanos__datoscontacto__ico {
@@ -1013,6 +898,7 @@ footer {
 
     .main__contacto__datos {
         width: 100%;
+        padding-top: 20px;
     }
 
     .footer {

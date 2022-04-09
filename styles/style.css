@@ -28,10 +28,8 @@ html {
     text-align: left;
     align-self: center;
     max-width: 48rem;
-    /* antes 45rem */
     font-size: 1.225rem;
-    margin-top: 1rem;
-    /* font-size: large; */ }
+    margin-top: 1rem; }
     .hero .textos__hero h1 {
       margin-bottom: 10px;
       font-size: 2rem; }
@@ -46,10 +44,17 @@ html {
       color: #ffffff;
       text-align: center;
       padding: 10px 0;
-      border-radius: 25px; }
+      border-radius: 25px;
+      -webkit-transition-property: color, background-color;
+      transition-property: color, background-color;
+      -webkit-transition-duration: .8s, .8s;
+      transition-duration: .8s, .8s;
+      -webkit-transition-timing-function: linear, ease-in;
+      transition-timing-function: linear, ease-in; }
       .hero .textos__hero .cta__hero:hover {
-        background: #868686;
-        transition: .8s; }
+        background-color: #5c5c5c;
+        transition: .5s;
+        transition-timing-function: ease-in; }
 
 .weight-400 {
   font-weight: 400;
@@ -79,7 +84,9 @@ header {
   -moz-osx-font-smoothing: grayscale;
   border-bottom: #b9b9b9 solid; }
   header .navbar .container-fluid .navbar-brand .header__container__logo {
-    transition: all .5s ease-in-out; }
+    transition: all .5s ease-in-out;
+    animation: carga .5s ease-in-out;
+    -webkit-animation: carga .5s ease-in-out; }
     header .navbar .container-fluid .navbar-brand .header__container__logo:hover {
       transform: scale(1.22); }
   header .navbar .container-fluid #navbarSupportedContent .navbar-nav .nav-item {
@@ -105,6 +112,14 @@ header {
       background-color: #f0f4f8d3; }
       header .navbar .container-fluid #navbarSupportedContent .navbar-nav .nav-item .dropdown-menu li a:hover {
         background-color: #007bff; }
+
+@keyframes carga {
+  0% {
+    transform: scale(1.25);
+    -webkit-transform: scale(1.25); }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
 
 .footer {
   background-color: #4e5257;
@@ -225,7 +240,14 @@ main {
   text-align: center;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  border-radius: 10px; }
+  border-radius: 10px;
+  user-select: none;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transition-duration: .4s, .4s;
+  transition-duration: .4s, .4s;
+  -webkit-transition-timing-function: linear, ease-in;
+  transition-timing-function: linear, ease-in; }
 
 .tarjeta:hover {
   background: #186adc;
@@ -250,6 +272,11 @@ main {
 .main__sobrenosotros {
   padding: 4.5rem 0;
   margin-bottom: -5rem; }
+  .main__sobrenosotros__container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    max-width: 1200px;
+    margin: 0 auto; }
 
 .main__sobrenosotros__container {
   padding-right: 1rem;
@@ -278,7 +305,6 @@ main {
   font-size: 1.5rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  /* margin-top: 0.125rem; */
   position: relative;
   color: #186adc;
   padding-right: 0.3125rem; }
@@ -303,19 +329,14 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   height: fit-content;
-  /* OJO REVISAR ESTA PROPIEDAD */
-  /* height: 20rem; */
-  /* margin-bottom: -30px; */
   justify-content: space-evenly;
   align-items: center;
   margin-top: 1rem; }
 
 .tarjetaproducto {
-  /* padding: 1.5rem 1.5rem 1rem 1.5rem; */
   background-color: #ffffff;
   width: fit-content;
   height: fit-content;
-  /* ojo con esta propiedad EDITAR a REM */
   margin: 30px 30px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -325,18 +346,6 @@ main {
 
 .tarjetaproducto:hover {
   box-shadow: 0 0 15px #515151; }
-
-@keyframes leaves {
-  0% {
-    transform: scale(1.25);
-    -webkit-transform: scale(1.25); }
-  100% {
-    transform: scale(1);
-    -webkit-transform: scale(1); } }
-
-.header__container__logo {
-  animation: leaves .5s ease-in-out;
-  -webkit-animation: leaves .5s ease-in-out; }
 
 .overlay {
   width: 282px;
@@ -406,8 +415,7 @@ main {
   padding: 2rem 8rem; }
 
 .subrayado {
-  font-weight: 400;
-  /* font-style: italic; */ }
+  font-weight: 400; }
 
 .main__contactanos__datoscontacto {
   padding-top: .5rem;
@@ -438,25 +446,6 @@ main {
   padding: 7rem 8rem 0 0; }
 
 /* ------FOOTER------ */
-/* -----QUIENES-SOMOS.HTML----- */
-.quienes-somos__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr auto 2fr;
-  gap: 10px 0px;
-  grid-auto-flow: row;
-  grid-template-areas: "header header header" "main main main" "footer footer footer"; }
-
-header {
-  grid-area: header; }
-
-main {
-  grid-area: main; }
-
-footer {
-  grid-area: footer;
-  margin-top: auto; }
-
 .secciones__container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -471,9 +460,13 @@ header {
 main {
   grid-area: main; }
 
+footer {
+  grid-area: footer;
+  margin-top: auto; }
+
 .main__secciones {
   padding: 3rem 0;
-  margin-bottom: -3rem; }
+  margin-bottom: -1rem; }
 
 .main__secciones__container {
   display: flex;
@@ -482,11 +475,11 @@ main {
   padding-top: .5rem;
   padding-right: 1rem;
   padding-left: 1rem;
-  max-width: 1200px;
   margin: 0 auto; }
 
 .main__secciones_banner {
   image-rendering: auto;
+  margin: 0 auto;
   image-rendering: crisp-edges; }
 
 .titulo-secciones {
@@ -504,14 +497,13 @@ main {
   padding: 5px 10px;
   text-align: center;
   font-size: 1.4rem;
-  margin-top: 1em; }
+  margin-top: .8em; }
 
 .parrafo-secciones {
   max-width: 1200px;
   text-align: justify;
   font-weight: 300;
-  font-size: 1.35rem;
-  hyphens: auto; }
+  font-size: 1.35rem; }
 
 .parrafo-secciones-cob {
   font-size: 1rem;
@@ -538,12 +530,17 @@ main {
   border-radius: 25px;
   margin-left: 25px; }
 
+.cotizador__secciones {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.cotizador__secciones__form {
+  max-width: 1000px;
+  margin: 0 auto; }
+
 /* -----PRODUCTOS.HTML----- */
 .body__productos {
   background-color: #f0f4f8; }
-
-header {
-  grid-area: header; }
 
 .main__productos {
   grid-area: main; }
@@ -577,53 +574,6 @@ header {
   max-height: 270px;
   padding-left: 5px;
   align-items: left; }
-
-/* -----01_automotores.HTML----- SECCIONES */
-/* -----ejercicio SASS II (MAPS+EXTEND+MIXIN)----- */
-.btn--instagram {
-  background-color: #833AB4;
-  font-size: 24px;
-  padding: 10px;
-  margin-top: 20px;
-  margin-left: 20px;
-  width: 150px; }
-
-.btn--twitter {
-  background-color: #55acee;
-  font-size: 24px;
-  padding: 10px;
-  margin-top: 20px;
-  margin-left: 20px;
-  width: 150px; }
-
-.btn--pinterest {
-  background-color: #c8232c;
-  font-size: 24px;
-  padding: 10px;
-  margin-top: 20px;
-  margin-left: 20px;
-  width: 150px; }
-
-.redsocial, .redsocial--nueva, .redsocial--segunda, .redsocial--copia {
-  border: 10px #1f7fec;
-  background-color: #5e5e5e;
-  width: 500px; }
-
-.redsocial--nueva {
-  color: #eee; }
-
-.redsocial--segunda {
-  color: darkgoldenrod;
-  background-color: beige; }
-
-.redsocial--copia {
-  color: gainsboro;
-  background-color: #919191; }
-
-.my-mixin {
-  height: 50px;
-  width: 500px;
-  background-color: #55acee; }
 
 /* -----ejercicio SASS II (MAPS+EXTEND+MIXIN)----- */
 /* -----MEDIA QUERYS----- */
@@ -748,6 +698,8 @@ footer {
     align-items: center;
     height: fit-content;
     padding-bottom: 2rem; }
+  .main__secciones_banner {
+    margin: 0; }
   .titulo-secciones {
     text-align: center;
     display: inline-block;
@@ -755,12 +707,14 @@ footer {
     border-radius: 20px;
     color: #fff;
     font-weight: 400;
-    font-size: 2rem;
     margin-top: 1em;
-    font-size: 1.45rem; }
+    font-size: 1.40rem;
+    padding: 5px 0; }
   .parrafo-secciones {
     font-size: 1.2rem;
-    font-weight: 400; }
+    font-weight: 400;
+    padding-top: .2rem;
+    hyphens: auto; }
   .titulo-secciones-cob {
     text-align: center;
     width: auto;
@@ -859,7 +813,6 @@ footer {
     margin: -16px -20px;
     transform: scale(0.9); }
   .main__contactanos {
-    /* display: none; */
     flex-direction: column; }
   .contactotitulo {
     padding: 1rem;
@@ -885,7 +838,8 @@ footer {
   .main__contacto__form {
     width: 100%; }
   .main__contacto__datos {
-    width: 100%; }
+    width: 100%;
+    padding-top: 20px; }
   .footer {
     padding: 0 2px; }
   .footer .menu a {

@@ -15,10 +15,8 @@
         text-align: left;
         align-self: center;
         max-width: 48rem;
-        /* antes 45rem */
         font-size: 1.225rem;
         margin-top: 1rem;
-        /* font-size: large; */
         h1 {
             margin-bottom: 10px;
             font-size: 2rem;
@@ -36,10 +34,16 @@
             text-align: center;
             padding: 10px 0;
             border-radius: 25px;
+            -webkit-transition-property: color, background-color; 
+            transition-property: color, background-color;
+            -webkit-transition-duration: .8s, .8s; 
+            transition-duration: .8s, .8s;
+            -webkit-transition-timing-function: linear, ease-in;
+            transition-timing-function: linear, ease-in;
             &:hover {
-                background: #868686;
-                transition: .8s;
-                // width: 250px;
+                background-color: #5c5c5c;
+                transition: .5s;
+                transition-timing-function: ease-in;
             }
         }
     }

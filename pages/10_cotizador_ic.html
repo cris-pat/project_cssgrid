@@ -7,7 +7,7 @@
 <!-- ETIQUETAS SEO -->
 <meta name="description" content="Somos un grupo de profesionales altamente calificados en el ramo asegurador con más de 10 años de experiencia en el rubro, ofrecemos soluciones a personas, familias y empresas.">
 <meta name="keyword" content="seguros, productor de seguros, productores de seguros, cotizaciones, asesoramiento, corredor de seguros, asesor de seguros, productor asesor">
-<title>Acerca de | CP Asesores</title>
+<title>Cotización Integral de Comercio | CP Asesores</title>
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
@@ -64,25 +64,74 @@
         <!-- inicio main -->
         <main>
             <section class="main__secciones">
-                <div class="sobretitulo">Quienes Somos</div>
-                <h1 class="titulo">Acerca de nosotros</h1>
+                <div class="sobretitulo">Cotizaciones</div>
+                <h1 class="titulo">Integral de comercio</h1>
                 <div class="main__secciones__container">
-                    <img class="main__secciones_banner" src="../assets/img/Banners/Quienes-somos.png" alt="Quienes Somos">
-                    <h2 class="titulo-secciones">CP Asesores </h2>
+                    <img class="main__secciones_banner" src="../assets/img/Banners/Ic.png" alt="Automotores">
+                    <h2 class="titulo-secciones">Formulario de cotización</h2>
                     <p class="parrafo-secciones">
-                        Somos un grupo de profesionales <strong>altamente calificados</strong> en el ramo asegurador con más de 10 años de experiencia en el rubro, ofrecemos soluciones a personas, familias y empresas orientadas en proteger el patrimonio y devolver su integridad al estado anterior de ocurrido un siniestro.
-                    <br>Buscamos ser la <strong>primera opción</strong> para el asesoramiento en seguros adaptándonos a cualquier tipo de necesidad con un servicio de alta calidad y un producto con amplias coberturas.
+                        Tenemos diversas coberturas con servicios adicionales incluidos para que elijas la que más se adapte a tus necesidades
                     </p>
-                    <h2 class="titulo-secciones">Misión</h2>
-                    <p class="parrafo-secciones">
-                        Alcanzar nuestros objetivos, mediante nuestro compromiso e implicación cada día, aplicando una clara vocación de <strong>servicio</strong>, con agilidad y resolución. Generando una <strong>relación de confianza</strong> constante y duradera con nuestros colaboradores y clientes para fortalecer los lazos e incrementar la fidelización que es nuestro principal eje en la práctica de nuestra actividad.
-                    </p>
-                    <h2 class="titulo-secciones">Visión</h2>
-                    <p class="parrafo-secciones">
-                        Deseamos ser un <strong>Corredor de Seguros de preferencia</strong> en el sector, a nivel interno por nuestra capacidad creativa y de desarrollo de productos adaptados a las necesidades de todos nuestros clientes, siendo una referencia del mercado por <strong>compromiso y transparencia</strong> en todos y cada uno de los productos que comercializamos.
-                    </p>
-                    
-                </div>
+                    <div class="cotizador__secciones">
+                        <h2 class="titulo-secciones-cob">Datos del tomador</h2>
+                        <div class="cotizador__secciones__form">
+                            <form class="row g-3">
+                                <div class="col-md-1">
+                                    <label for="text" class="form-label">Tipo</label>
+                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                        <option selected>DNI</option>
+                                        <option value="1">CUIT</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="inputDNI" class="form-label">&nbsp</label>
+                                    <input type="number" class="form-control" id="inputDNI" placeholder="">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="text" class="form-label">Nombre / Razon Social</label>
+                                    <input type="text" class="form-control" id="inputName">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="inputEmail4" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4" placeholder="">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="inputPhone" class="form-label">Teléfono</label>
+                                    <input type="number" class="form-control" id="inputPhone" placeholder="+54 11 4444 5555">
+                                </div>
+                                <div class="col-md-8">
+                                    <label for="text" class="form-label">Domicilio Riesgo</label>
+                                    <input type="text" class="form-control" id="inputAsunto" placeholder="">
+                                </div>
+                                <div class="col-md-12">
+                                    <h2 class="titulo-secciones-cob">Datos del comercio</h2>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="text" class="form-label">Rubro</label>
+                                    <input type="text" class="form-control" id="idRubro">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="text" class="form-label">Valores contenido</label>
+                                    <input type="text" class="form-control" id="idValores" placeholder="">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="text" class="form-label">Suferficie (m2 cubiertos)</label>
+                                    <input type="text" class="form-control" id="idSuperficie" placeholder="">
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            No soy un robot
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
             </section>
         </main>
         <!-- inicio footer -->

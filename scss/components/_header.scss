@@ -8,14 +8,14 @@ header {
     -moz-osx-font-smoothing: grayscale;
     // height: 19vh;
     border-bottom: #b9b9b9 solid;
-
     .navbar {
         .container-fluid {
             .navbar-brand {
                 .header__container__logo {
-                    // padding-top: .5rem;
                     transition: all .5s ease-in-out;
-                    
+                    // animación carga pagina @kf
+                    animation: carga .5s ease-in-out ;
+                    -webkit-animation: carga .5s ease-in-out;
 
                     &:hover {
                         transform: scale(1.22);
@@ -65,5 +65,15 @@ header {
                 }
             }
         }
+    }
+}
+@keyframes carga {
+    0% {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
     }
 }
